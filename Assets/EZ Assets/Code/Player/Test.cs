@@ -34,9 +34,9 @@ public class Test : MonoBehaviour
         {
             Combat_Action taget = other.GetComponent<Combat_Action>();
             int numattack;
-            numattack = Random.Range(1, 4); // Số lượng tấn công
+            numattack = Random.Range(1, 4);
 
-            taget.HitControl(numattack, 10); // Gọi hàm GotHit trên Player
+            taget.HitControl(numattack, 10);
         }
     }
 }

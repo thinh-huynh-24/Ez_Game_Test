@@ -59,15 +59,15 @@ public class Lock_Enemy : MonoBehaviour
         if (nearestEnemy != null)
         {
             return nearestEnemy;
-            // Có thể quay mặt về phía enemy chẳng hạn:
+
             // transform.LookAt(nearestEnemy.transform);
         }
-        return null; // Không tìm thấy enemy trong phạm vi
+        return null;
     }
 
     public void LookAtEnemy(GameObject taget)
     {
-        if (taget == null) return; // Nếu không có enemy thì không làm gì cả    
+        if (taget == null) return;
         Vector3 direction = (taget.transform.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);

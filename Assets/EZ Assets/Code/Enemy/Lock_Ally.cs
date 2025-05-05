@@ -89,15 +89,14 @@ public class Lock_Ally : MonoBehaviour
         if (nearestAlly != null)
         {
             return nearestAlly;
-            // Có thể quay mặt về phía Ally chẳng hạn:
             // transform.LookAt(nearestAlly.transform);
         }
-        return null; // Không tìm thấy Ally trong phạm vi
+        return null;
     }
 
     public void LookAtAlly(GameObject taget)
     {
-        if (taget == null) return; // Nếu không có Ally thì không làm gì cả    
+        if (taget == null) return;
         Vector3 direction = (taget.transform.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(direction);
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);

@@ -17,7 +17,7 @@ public class Player_Gesture : MonoBehaviour
     [SerializeField] private bool swipeDetected = false;
     [SerializeField] private bool isTouching = false;
     [SerializeField] private float threshold = 100f;
-    [SerializeField] private bool isHoldingLong = false; // biến để kiểm tra trạng thái long touch
+    [SerializeField] private bool isHoldingLong = false;
 
     void Awake()
     {
@@ -36,15 +36,15 @@ public class Player_Gesture : MonoBehaviour
 
         longTouch.started += ctx =>
         {
-            isHoldingLong = false; // reset
+            isHoldingLong = false;
         };
         longTouch.performed += ctx =>
         {
-            isHoldingLong = true; // đủ thời gian giữ lâu
+            isHoldingLong = true;
         };
         longTouch.canceled += ctx =>
         {
-            isHoldingLong = false; // thả tay ra
+            isHoldingLong = false;
         };
     }
 
@@ -58,7 +58,7 @@ public class Player_Gesture : MonoBehaviour
     {
         isTouching = false;
         joystickOutput = Vector2.zero;
-        swipeDetected = false; // reset lại
+        swipeDetected = false;
     }
 
     void OnDisable()
@@ -126,12 +126,12 @@ public class Player_Gesture : MonoBehaviour
 
     public Vector2 MoveControle()
     {
-        return joystickOutput; // dùng cho nhân vật di chuyển
+        return joystickOutput;
     }
 
     public bool IsTouching()
     {
-        return isTouching; // dùng cho nhân vật tấn công
+        return isTouching;
     }
 
     public bool IsSwipeUp()
@@ -202,6 +202,6 @@ public class Player_Gesture : MonoBehaviour
     public bool IsLongPress()
     {
 
-        return isHoldingLong; // trả về true nếu đang giữ lâu
+        return isHoldingLong;
     }
 }

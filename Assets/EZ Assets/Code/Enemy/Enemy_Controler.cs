@@ -87,7 +87,6 @@ public class Enemy_Controler : MonoBehaviour
 
                     // Debug.Log("distance: " + distance);
 
-                    // Cập nhật move input khi target thay đổi vị trí
                     if (lastTargetPosition != targetPosition)
                     {
                         enemy_Move.SetMoveInput(targetPosition);

@@ -57,7 +57,6 @@ public class Player_Controle : MonoBehaviour
         }
         gameManager.DownPlayer();
     }
-    // Update is called once per frame
     void Update()
     {
         if (!isSpawm)

@@ -57,7 +57,6 @@ public class ObjectPool : MonoBehaviour
         return ps;
     }
 
-    // ---------- Get Methods ----------
     public GameObject GetAlly()
     {
         return GetFromPool(AllyPool, Ally);
@@ -83,7 +82,6 @@ public class ObjectPool : MonoBehaviour
         return GetFromPool(BlockPool, Block);
     }
 
-    // ---------- Return Methods ----------
     public void ReturnAlly(GameObject obj)
     {
         ReturnToPool(AllyPool, obj);
@@ -101,7 +99,6 @@ public class ObjectPool : MonoBehaviour
         pool.Enqueue(effect);
     }
 
-    // ---------- Generic Methods ----------
     public GameObject GetFromPool(Queue<GameObject> pool, GameObject prefab)
     {
         GameObject obj = pool.Count > 0 ? pool.Dequeue() : Instantiate(prefab);
