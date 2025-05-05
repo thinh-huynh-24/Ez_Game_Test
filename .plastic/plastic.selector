@@ -1,0 +1,4 @@
+repository "Ez_Game_Test/Ez_Game_Test@18968187243328@cloud"
+  path "/"
+    br "/main"
+    co "/main"
