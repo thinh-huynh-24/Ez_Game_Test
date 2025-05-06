@@ -8,7 +8,7 @@ Là một trò chơi chiến đấu cận chiến trong sàn Boxing, người ch
 - **1 vs Many** – Một mình chống lại một nhóm kẻ địch
 - **Many vs Many** – Trận đánh đồng đội với nhiều chiến binh trên cả hai bên
 
-### 🎮 Cơ chế điều khiển:
+###  Cơ chế điều khiển:
 
 | Thao tác                             | Hành động                         |
 |-------------------------------------|-----------------------------------|
